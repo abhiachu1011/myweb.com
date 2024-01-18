@@ -31,4 +31,4 @@ jobs:
 
     - name: Deploy to EC2
       run: |0
-        rsync -avz  -e "ssh -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/ ubuntu@:15.207.14.178 /home/ubuntu/myweb.com
+        rsync -avz  -e "ssh -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/ ubuntu@:15.207.14.178 /home/ubuntu/myweb.com/
