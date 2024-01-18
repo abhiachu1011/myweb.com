@@ -27,8 +27,8 @@ jobs:
       run: |
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H 1316356 >> ~/.ssh/known_hosts
+        ssh-keyscan -H 15.207.14.178  >> ~/.ssh/known_hosts
 
     - name: Deploy to EC2
-      run: |
-        rsync -avz  -e "ssh -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/ ubuntu@3224242:/home/ubuntu/demoaction/
+      run: |0
+        rsync -avz  -e "ssh -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/ ubuntu@:15.207.14.178 home/ubuntu/demoaction/
